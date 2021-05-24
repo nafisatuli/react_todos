@@ -9,7 +9,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
         value: ''
     });
     const submitUpdate = value => {
-        updateTodo(edit.id, value)
+        updateTodo(edit.id, value);
         setEdit({
             id: null,
             value: ''
@@ -40,4 +40,4 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
     ))
 }
 
-export default Todo
+export default Todo;

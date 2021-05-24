@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 
 function Form(props) {
     const [input, setInput] = useState('');
-    const inputRef = useRef(null)
+    const inputRef = useRef(null);
 
     useEffect(() => {
         inputRef.current.focus()
@@ -18,7 +18,6 @@ function Form(props) {
             id: Math.floor(Math.random() * 10000),
             text: input
         });
-
         setInput('');
     }
     return (
@@ -34,7 +33,12 @@ function Form(props) {
                 onChange={handleChange}
                 ref={inputRef}
             />
-            <button>Add todo</button>
+            <button
+                onClick={handleSubmit}
+                className="todoButton"
+            >
+                Add todo
+            </button>
         </form>
     )
 }
